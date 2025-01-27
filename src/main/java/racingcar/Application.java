@@ -11,3 +11,5 @@ public class Application {
 
     }
 }
+//fuclin Functonal Interface1개
+//OPtinacl1개

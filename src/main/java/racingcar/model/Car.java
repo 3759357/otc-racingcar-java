@@ -1,13 +1,13 @@
 package racingcar.model;
 import camp.nextstep.edu.missionutils.Randoms;
-public class Car {
+public class Car extends CarAbstract {
     private final String CarName;
-    private int CarDistance;
+    private int CarDistance=0;
 
-    public Car(String carName,int carDistance) {
+    public Car(String carName) {
         this.CarName = carName;
-        this.CarDistance = carDistance;
-        System.out.println("완성");
+
+        //System.out.println("완성");
     }
     public void setCarDistance(){
         if(Randoms.pickNumberInRange(0,9)>4){
@@ -16,10 +16,20 @@ public class Car {
         }
 
     }
+    @Override
     public String getCarName(){
         return this.CarName;
     }
+    @Override
     public int getCarDistance(){
         return this.CarDistance;
+    }
+
+    @Override
+    public void CarMove() {
+        if(Randoms.pickNumberInRange(0,9)>4){
+            this.CarDistance=this.CarDistance+1;
+
+        }
     }
 }

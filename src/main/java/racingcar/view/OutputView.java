@@ -1,8 +1,11 @@
 package racingcar.view;
 
-public class OutputView {
-	public static void OutputVIew(String winner){
-		System.out.println("최종우승자: "+winner);
+import racingcar.util.Util;
+
+public class OutputView implements ViewInterface {
+
+	public static void View(String winner){
+		System.out.println(Util.OutputViewWinner.getMessage()+winner);
 
 	}
 
